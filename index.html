@@ -5,8 +5,202 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    <header class="page-header">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+      <div class="logo">
+        <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
+      </div>
 
+      <section class="tools">
+
+          <form class="search" action="" method="get">
+            <label>
+              <input type="text" name="search">
+              <span>Поиск по сайту</span>
+            </label>
+            <button type="submit">Найти</button>
+          </form>
+
+          <ul class="user-block">
+            <li>
+              <a href="#">Войти</a>
+            </li>
+          </ul>
+
+          <ul class="purchase-tools">
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+
+      </section>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="">Каталог товаров</a>
+            <ul>
+              <li>
+                <a href="">Виртуальная реальность</a>
+              </li>
+              <li>
+                <a href="">Моноподы для селфи</a>
+              </li>
+              <li>
+                <a href="">Экшн-камеры</a>
+              </li>
+              <li>
+                <a href="">Фитнес-браслеты</a>
+              </li>
+              <li>
+                <a href="">Умные часы</a>
+              </li>
+              <li>
+                <a href="">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Доставка</a>
+          </li>
+          <li>
+            <a href="">Гарантия</a>
+          </li>
+          <li>
+            <a href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+
+        <section class="promo-slider">
+
+          <div class="slider-controllers">
+            <label>
+              <input type="radio" name="promo-slider" id="first" value="1">
+              <span>Первый слайд</span>
+            </label>
+            <label>
+              <input type="radio" name="promo-slider" id="second" value="2">
+              <span>Второй слайд</span>
+            </label>
+            <label>
+              <input type="radio" name="promo-slider" id="third" value="3">
+              <span>Третий слайд</span>
+            </label>
+          </div>
+
+          <div class="slide first-slide">
+            <img src="img/selfie-stick.png" width="384" height="486" alt="Селфи-палка">
+            <span class="slider-number">01</span>
+            <h2>Делай селфи, как Бен Стиллер!</h2>
+            <p>Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a href="">Подробнее</a>
+            <ul>
+              <li>
+                <span>8,5 м</span>
+                <span>Длина палки</span>
+              </li>
+              <li>
+                <span>5 кг</span>
+                <span>Вес палки</span>
+              </li>
+              <li>
+                <span>Карбон</span>
+                <span>Материал</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="slide second-slide">
+            <img src="img/fitness-bracelet.png" width="345" height="485" alt="Фитнес-браслет">
+            <span class="slider-number">02</span>
+            <h2>Худеем правильно!</h2>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a href="">Подробнее</a>
+            <ul>
+              <li>
+                <span>48 часов</span>
+                <span>Без подзарядки</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="slide third-slide">
+            <img src="img/quadrocopter.png" width="526" height="334" alt="Квадрокоптер">
+            <span class="slider-number">03</span>
+            <h2>Порхает как бабочка, жалит как пчела!</h2>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a href="">Подробнее</a>
+            <ul>
+              <li>
+                <span>800 м</span>
+                <span>Дальность полета</span>
+              </li>
+              <li>
+                <span>50 м</span>
+                <span>Радиус поражения</span>
+              </li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section class="catalog-sections">
+          <ul>
+            <li>
+              <a href="">Виртуальная реальность</a>
+            </li>
+            <li>
+              <a href="">Моноподы для селфи</a>
+            </li>
+            <li>
+              <a href="">Экшн-камеры</a>
+            </li>
+            <li>
+              <a href="">Фитнес-браслеты</a>
+            </li>
+            <li>
+              <a href="">Умные часы</a>
+            </li>
+            <li>
+              <a href="">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="services-slider">
+        <div class="container">
+
+          <div class="services-controllers">
+            <label>
+              <input type="radio" name="services-slider" id="delivery" value="1">
+              <span>Доставка</span>
+            </label>
+            <label>
+              <input type="radio" name="services-slider" id="warranty" value="2">
+              <span>Гарантия</span>
+            </label>
+            <label>
+              <input type="radio" name="services-slider" id="credit" value="3">
+              <span>Кредит</span>
+            </label>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+    <footer>
+      <div class="container">
+
+      </div>
+    </footer>
   </body>
 </html>
