@@ -1434,8 +1434,6 @@ a.logo:active {
 }
 
 .filter-block {
-  position: relative;
-
   padding: 0;
   margin: 0;
   margin-bottom: 12px;
@@ -1443,7 +1441,21 @@ a.logo:active {
   border: none;
 }
 
-.filter-block::before {
+.filter-block legend {
+  position: relative;
+
+  display: block;
+  padding-top: 12px;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  font-weight: 800;
+  letter-spacing: 0.18px;
+}
+
+.filter-block legend::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1455,17 +1467,6 @@ a.logo:active {
   background-color: #000000;
 }
 
-.filter-block legend {
-  display: block;
-  padding-top: 12px;
-
-  font-family: "Gilroy", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-  font-weight: 800;
-  letter-spacing: 0.18px;
-}
 
 .range-filter {
   margin-top: 25px;
