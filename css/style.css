@@ -88,6 +88,7 @@ input[type="radio"].visually-hidden {
 .container {
   position: relative;
   width: 1160px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -167,7 +168,7 @@ button.button:active svg {
 }
 
 .inner-page .page-header {
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 }
 
 .logo {
@@ -661,12 +662,13 @@ a.logo:active {
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
+  left: 50%;
 
   width: 1160px;
   height: 126px;
-  background-color: #f7e296;
+  margin-left: -580px;
 
+  background-color: #f7e296;
 }
 
 .slider-item {
@@ -948,6 +950,7 @@ a.logo:active {
 /* Услуги интернет-магазина */
 
 .services-slider {
+  min-width: 1200px;
   margin-top: 140px;
   margin-bottom: 34px;
 
@@ -1395,7 +1398,6 @@ a.logo:active {
 
 .catalog-columns {
   display: flex;
-  justify-content: center;
 }
 
 /* Фильтр */
@@ -1405,6 +1407,8 @@ a.logo:active {
   flex-direction: column;
   align-items: flex-end;
   flex-grow: 1;
+  min-width: 348px;
+
   background-color: #ebebeb;
 }
 
@@ -1418,6 +1422,7 @@ a.logo:active {
   display: block;
   width: 268px;
   padding: 23px 0;
+  padding-left: 60px;
   margin-left: auto;
 }
 
@@ -1670,6 +1675,7 @@ a.logo:active {
 }
 
 .catalog {
+  min-width: 852px;
   flex-grow: 1;
   margin-bottom: 77px;
 }
@@ -2072,6 +2078,7 @@ a.logo:active {
 /* Футер */
 
 .page-footer {
+  min-width: 1200px;
   padding-top: 65px;
   padding-bottom: 25px;
 
