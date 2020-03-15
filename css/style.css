@@ -176,6 +176,7 @@ button.button:active svg {
   top: -18px;
 
   display: block;
+  width: 163px;
   margin-bottom: -11px;
 }
 
@@ -376,8 +377,8 @@ a.logo:active {
 }
 
 .search-input:focus ~ .search-button,
-.search-button:active,
-.search-button:focus-within  {
+.search-button:focus,
+.search-button:active {
   display: block;
   width: auto;
   height:auto;
@@ -433,6 +434,7 @@ a.logo:active {
   letter-spacing: 0.15px;
 
   border: 0;
+  border-radius: 0;
   background: none;
 
   opacity: 0.3;
@@ -445,6 +447,14 @@ a.logo:active {
 
 .user-link-out:active {
   opacity: 1;
+}
+
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+.user-link-out:active span {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .purchase-tools {
@@ -620,7 +630,8 @@ a.logo:active {
   width: 200px;
 }
 
-.nav-item-catalog:hover .subnav {
+.nav-link-catalog:hover .subnav,
+.nav-link-catalog:focus .subnav {  /* Дублирую для IE, иначе он не понимает фокус */
   display: block;
   width: 1160px;
   height: auto;
@@ -845,6 +856,14 @@ a.logo:active {
 .second-promo:checked ~ .slider-controls label[for="second"],
 .third-promo:checked ~ .slider-controls label[for="third"] {
   background-image: url("../img/slider-button.svg");
+
+}
+
+.first-promo:focus ~ .slider-controls label[for="first"],
+.second-promo:focus ~ .slider-controls label[for="second"],
+.third-promo:focus ~ .slider-controls label[for="third"] {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 /* Список популярных категорий товаров */
@@ -1000,6 +1019,8 @@ a.logo:active {
   margin-top: 0;
 
   background-color: #000000;
+
+  transition: none;
 }
 
 .services-list {
@@ -1099,6 +1120,13 @@ a.logo:active {
   background-color: #000000;
 }
 
+.delivery-input:focus ~ .services-controls label[for="delivery"]::before,
+.warranty-input:focus  ~ .services-controls label[for="warranty"]::before,
+.credit-input:focus ~ .services-controls label[for="credit"]::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 /* Бренды */
 
 .brands {
@@ -1181,9 +1209,9 @@ a.logo:active {
 }
 
 .about {
-  width: 472px;
+  width: 473px;
 
-  margin-right: 125px;
+  margin-right: 124px;
 }
 
 .heading {
@@ -1592,7 +1620,10 @@ a.logo:active {
   letter-spacing: 0.14px;
 
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .filter-label::before {
@@ -2093,7 +2124,7 @@ a.logo:active {
 }
 
 .footer-implements {
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -2156,7 +2187,7 @@ a.logo:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  align-items: baseline;
+  align-items: flex-start;
   width: 260px;
   padding: 0;
   margin: 0;
@@ -2315,7 +2346,8 @@ a.logo:active {
 
   list-style: none;
 
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .social-item {
@@ -2363,6 +2395,15 @@ a.logo:active {
   width: 27px;
   height: 35px;
   margin-left: auto;
+}
+
+.copyright:hover,
+.copyright:focus {
+  opacity: 0.6;
+}
+
+.copyright:active {
+  opacity: 0.3;
 }
 
 /* Модальные окна */
@@ -2450,7 +2491,7 @@ a.logo:active {
   display: block;
   width: 100%;
   height: 50px;
-  padding: 7px 16px 14px;
+  padding: 14px 16px;
   margin: 0;
 
   font-family: "Open Sans", Arial, sans-serif;
@@ -2485,15 +2526,19 @@ a.logo:active {
 .write-us-input::-webkit-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
+
 .write-us-input::-moz-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
+
 .write-us-input:-ms-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
+
 .write-us-input::-ms-input-placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
+
 .write-us-input::placeholder {
   color: rgba(70, 70, 70, 0.4);
 }
@@ -2505,6 +2550,8 @@ a.logo:active {
 .write-us-button {
   padding-left: 35px;
   padding-right: 33px;
+
+  background-color: #ffffff;
 }
 
 .modal-map {
