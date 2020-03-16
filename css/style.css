@@ -631,7 +631,7 @@ a.logo:active {
 }
 
 .nav-link-catalog:hover ~ .subnav,
-.nav-link-catalog:focus ~ .subnav {  /* Дублирую для IE, иначе он не пониамает */
+.nav-link-catalog:focus ~ .subnav {    /* Дублирую для IE, иначе он не понимает фокус и не показывает выпадающее меню */
   display: block;
   width: 1160px;
   height: auto;
@@ -2408,6 +2408,90 @@ a.logo:active {
 
 /* Модальные окна */
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  90% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -2427,6 +2511,7 @@ a.logo:active {
   position: absolute;
   top: 22px;
   right:22px;
+  z-index: 3;
 
   width: 55px;
   height: 55px;
@@ -2438,6 +2523,7 @@ a.logo:active {
   border: none;
 
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .modal-close:hover,
@@ -2507,11 +2593,11 @@ a.logo:active {
   box-sizing: border-box;
 }
 
-/*.write-us-input:invalid {
+.write-us-input-invalid,
+ .write-us-input:invalid {
   background-color: #f6dada;
   border-color: transparent;
 }
-*/
 
 .write-us-input:hover {
   background-color: #eaeaea;
@@ -2560,6 +2646,31 @@ a.logo:active {
   height: 559px;
 }
 
+.map-container {
+  position: relative;
+  z-index: 2;
+
+  width: 960px;
+  height: 559px;
+}
+
 .modal-map-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   display: block;
+}
+
+.modal-open {
+  display: block;
+
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.4s;
+          animation: shake 0.4s;
 }
