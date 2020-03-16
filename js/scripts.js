@@ -43,9 +43,6 @@ close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-open");
   popup.classList.remove("modal-error");
-  surname.classList.remove("write-us-input-invalid");
-  email.classList.remove("write-us-input-invalid");
-  message.classList.remove("write-us-input-invalid");
 });
 
 /* Проверка формы перед отправкой  */

@@ -87,6 +87,7 @@ input[type="radio"].visually-hidden {
 
 .container {
   position: relative;
+
   width: 1160px;
   padding: 0 20px;
   margin: 0 auto;
@@ -96,6 +97,7 @@ input[type="radio"].visually-hidden {
 
 .button {
   position: relative;
+
   display: inline-block;
   padding: 8px 43px;
 
@@ -123,20 +125,22 @@ input[type="radio"].visually-hidden {
   content: "";
   left: 0;
   top: 50%;
-  margin-top: -4px;
+  z-index: 1;
 
   width: 100%;
   height: 8px;
+  margin-top: -4px;
+
   background-color: #f0c52e;
 
-  z-index: 1;
   transition: all 0.5s ease;
 }
 
 .button:hover::before,
 .button:focus::before{
-  height: 100%;
   top: 0;
+
+  height: 100%;
   margin-top: 0;
 }
 
@@ -212,13 +216,14 @@ a.logo:active {
 .search {
   display: flex;
   width: 500px;
-  margin: 0;
   padding: 0;
+  margin: 0;
   margin-right: 40px;
 }
 
 .search-label {
   position: relative;
+
   display: block;
 }
 
@@ -260,7 +265,6 @@ a.logo:active {
 }
 
 /* Убирает крестик в поле поиска */
-
 
 .search-input::-ms-clear {
   display: none;
@@ -359,6 +363,7 @@ a.logo:active {
 .search-button:hover,
 .search-button:focus {
   display: block;
+
   color: #ffffff;
 
   background-color: #000000;
@@ -408,6 +413,7 @@ a.logo:active {
 
 .user-link {
   position: relative;
+
   display: block;
   padding-left: 26px;
 }
@@ -417,6 +423,7 @@ a.logo:active {
   position: absolute;
   top: 9px;
   left: 0;
+
   width: 13px;
   height: 12px;
 
@@ -433,9 +440,9 @@ a.logo:active {
   font: inherit;
   letter-spacing: 0.15px;
 
+  background: none;
   border: 0;
   border-radius: 0;
-  background: none;
 
   opacity: 0.3;
 }
@@ -478,6 +485,7 @@ a.logo:active {
 
 .tools-link {
   position: relative;
+
   display: block;
   padding-left: 24px;
 }
@@ -494,6 +502,7 @@ a.logo:active {
 .link-compare::before {
   top: 11px;
   left: 5px;
+
   width: 10px;
   height: 10px;
 
@@ -503,6 +512,7 @@ a.logo:active {
 .link-cart::before {
   top: 9px;
   left: 1px;
+
   width: 12px;
   height: 12px;
 
@@ -583,6 +593,7 @@ a.logo:active {
   position: absolute;
   top: 3px;
   right: 5px;
+
   width: 16px;
   height: 16px;
 
@@ -612,7 +623,6 @@ a.logo:active {
 .subnav-list {
   display: flex;
   flex-wrap: wrap;
-
   width: 640px;
   padding: 0;
   margin: 0;
@@ -657,7 +667,6 @@ a.logo:active {
 .slider-controls {
   position: absolute;
 }
-
 
 .slider-list {
   position: relative;
@@ -752,6 +761,7 @@ a.logo:active {
 .slide-title {
   position: relative;
   z-index: 2;
+
   padding: 0;
   margin: 0;
   margin-bottom: 18px;
@@ -982,6 +992,7 @@ a.logo:active {
 
 .services-controls {
   position: relative;
+
   width: 284px;
   padding-top: 80px;
   margin-right: 116px;
@@ -1014,6 +1025,7 @@ a.logo:active {
 
 .services-label:active::before {
   top: 0;
+
   width: 278px;
   height: 100%;
   margin-top: 0;
@@ -1091,6 +1103,7 @@ a.logo:active {
   font-weight: 800;
   letter-spacing: 0.47px;
 }
+
 .services-description {
   padding: 0;
   margin: 0;
@@ -1113,6 +1126,7 @@ a.logo:active {
 .warranty-input:checked ~ .services-controls label[for="warranty"]::before,
 .credit-input:checked ~ .services-controls label[for="credit"]::before {
   top: 0;
+
   width: 278px;
   height: 100%;
   margin-top: 0;
@@ -1191,6 +1205,7 @@ a.logo:active {
 .brands-image {
   position: relative;
   z-index: 1;
+
   display: block;
 }
 
@@ -1210,7 +1225,6 @@ a.logo:active {
 
 .about {
   width: 473px;
-
   margin-right: 124px;
 }
 
@@ -1314,9 +1328,9 @@ a.logo:active {
 }
 
 .contacts-button {
-  margin-left: 3px;
   padding-left: 40px;
   padding-right: 37px;
+  margin-left: 3px;
 }
 
 /* Cтили внутренних страниц */
@@ -1349,7 +1363,6 @@ a.logo:active {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3.2px;
-
 }
 
 /* Хлебные крошки */
@@ -1656,19 +1669,17 @@ a.logo:active {
 .checkbox-color:checked + .filter-checkbox::before {
   width: 27px;
 
-  border: 0;
-
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: left top;
+  border: 0;
 }
 
 .radio-bluetooth:checked + .filter-radio::before {
-  border: 0;
-
   background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: left top;
+  border: 0;
 }
 
 .filter-label:hover::before {
@@ -1696,7 +1707,6 @@ a.logo:active {
   opacity: 0.25;
   cursor: default;
 }
-
 
 .filter-button {
   padding-left: 42px;
@@ -1954,19 +1964,17 @@ a.logo:active {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
   width: 0;
   height: 0;
   overflow: hidden;
 
   background-color: rgba(238, 238, 238, 0.7);
-
 }
 
 .buy {
-  margin-top: 173px;
   padding-left: 38px;
   padding-right: 38px;
+  margin-top: 173px;
   margin-bottom: 6px;
 }
 
@@ -2025,9 +2033,9 @@ a.logo:active {
   justify-content: center;
   align-items: center;
   width: 400px;
-  margin: 0;
   padding: 0;
   padding-left: 4px;
+  margin: 0;
 
   list-style: none;
 }
@@ -2321,8 +2329,8 @@ a.logo:active {
 
 .footer-socials {
   position: relative;
-  align-items: flex-end;
 
+  align-items: flex-end;
   padding: 41px 0;
 }
 
@@ -2334,6 +2342,7 @@ a.logo:active {
 
   width: 80px;
   height: 7px;
+
   background-color: #ffc600;
 }
 
@@ -2536,8 +2545,8 @@ a.logo:active {
 }
 
 .modal-form {
-  padding: 93px 100px 78px;
   display: none;
+  padding: 93px 100px 78px;
 }
 
 .write-us-form {
