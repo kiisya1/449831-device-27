@@ -630,8 +630,8 @@ a.logo:active {
   width: 200px;
 }
 
-.nav-link-catalog:hover .subnav,
-.nav-link-catalog:focus .subnav {  /* Дублирую для IE, иначе он не понимает фокус */
+.nav-link-catalog:hover ~ .subnav,
+.nav-link-catalog:focus ~ .subnav {  /* Дублирую для IE, иначе он не пониамает */
   display: block;
   width: 1160px;
   height: auto;
