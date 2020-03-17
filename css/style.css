@@ -150,8 +150,7 @@ input[type="radio"].visually-hidden {
 
 /* Стили для корректного отображения кнопок в состоянии active в IE */
 
-button.button:active span,
-button.button:active svg {
+button.button:active span {
   position: relative;
   top: 0;
   left: 0;
@@ -640,7 +639,7 @@ a.logo:active {
   width: 200px;
 }
 
-.nav-link-catalog:hover ~ .subnav,
+.nav-item-catalog:hover .subnav,
 .nav-link-catalog:focus ~ .subnav {    /* Дублирую для IE, иначе он не понимает фокус и не показывает выпадающее меню */
   display: block;
   width: 1160px;
@@ -671,6 +670,7 @@ a.logo:active {
 .slider-list {
   position: relative;
 
+  min-height: 502px;
   margin: 0;
   padding: 0;
 
@@ -1178,6 +1178,10 @@ a.logo:active {
   background-position: center;
 }
 
+.brands-link:active {
+  opacity: 0.6;
+}
+
 .brands-dji:hover,
 .brands-dji:focus,
 .brands-dji:active {
@@ -1203,17 +1207,15 @@ a.logo:active {
 }
 
 .brands-image {
-  position: relative;
-  z-index: 1;
-
   display: block;
 }
 
 .brands-link:hover .brands-image,
 .brands-link:focus .brands-image,
 .brands-link:active .brands-image {
-  z-index: -1;
+  display: none;
 }
+
 
 /* О нас и Контакты */
 
@@ -1433,6 +1435,12 @@ a.logo:active {
 
 .breadcrumbs-link:active {
   color: rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumbs-link-current:hover,
+.breadcrumbs-link-current:focus,
+.breadcrumbs-link-current:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Каталог */
@@ -2466,21 +2474,20 @@ a.logo:active {
 .modal {
   position: fixed;
   z-index: 100;
-  top: 80px;
+  top: 50%;
   left: 50%;
 
   width: 960px;
-  margin-left: -480px;
 
   background-color: #ffffff;
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 
   box-sizing: border-box;
 
-  -webkit-transform: translateY(-2000px);
-          transform: translateY(-2000px);
+  -webkit-transform: translate(-50%, -2000px);
+          transform: translate(-50%, -2000px);
 
-  transition: all 0.6s ease-out;
+  transition: all 0.6s ease-in-out;
 }
 
 .modal-close {
@@ -2513,6 +2520,7 @@ a.logo:active {
 
 .modal-form {
   padding: 93px 100px 78px;
+  margin-top: -277px;
 }
 
 .write-us-form {
@@ -2618,6 +2626,7 @@ a.logo:active {
 .modal-map {
   width: 960px;
   height: 559px;
+  margin-top: -280px;
 }
 
 .map-container {
@@ -2638,8 +2647,8 @@ a.logo:active {
 }
 
 .modal-open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .modal-error {
